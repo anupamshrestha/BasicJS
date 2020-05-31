@@ -4,4 +4,4 @@ Oranges
 curryMan
 cucumber 
 Eggplant
-walnut
+English walnut
