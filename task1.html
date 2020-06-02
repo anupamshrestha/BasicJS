@@ -7,20 +7,20 @@
 </head>
 <body>
     <h1>Reverse a number</h1>
-   <input type="Number" id = "number" placeholder="Enter the number" >
-    <button onclick="document.getElementById('demo1').innerHTML = myFunction()">Reverse</button>
+   <input type="abcd" id = "number" placeholder="Enter the number" >
+    <button >Reverse</button>
     <p id="demo"></p>
     <p id="demo1"></p>
 </body>
-<script>
-    let number = document.getElementById("number").value;
-    console.log(number);
+<script type="text/javascript">
+    const input = document.querySelector('input'); 
+    const btn = document.querySelector('button');
+    const para = document.querySelector("#demo1");
 
-    function myFunction() {
-       return number.split("").reverse().join("");
-    }
-    document.getElementById("demo").innerHTML =  number;
-
-  
+    btn.addEventListener("click", function() {
+        let reverse = input.value.split("").reverse().join("");
+        return para.textContent = reverse; 
+    });
+    
 </script>
 </html>
