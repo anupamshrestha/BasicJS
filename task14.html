@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name"> Enter the name :</label>
+    <input type="text" name="name" id="name" placeholder="Enter the name"> <br><br>
+    <button> Search </button>
+    <div class = "name"></div>
+    <p></p>
+    
+</body>
+<script>
+     let phonebook = [
+      { name : 'Chris', number : '1549' },
+      { name : 'Li Kang', number : '9634' },
+      { name : 'Anne', number : '9065' },
+      { name : 'Francesca', number : '3001' },
+      { name : 'Mustafa', number : '6888' },
+      { name : 'Tina', number : '4312' },
+      { name : 'Bert', number : '7780' },
+      { name : 'Jada', number : '2282' },
+    ]
+   
+    let para = document.querySelector("p");
+    let input = document.querySelector("input");
+    let btn  = document.querySelector('button');
+    let div = document.querySelector('div');
+    div.innerHTML = "";
+    btn.addEventListener("click", myFunction);
+    function myFunction() {
+   
+    let searchName = input.value.toLowerCase();
+        for (let i = 0; i < phonebook.length; i++) { 
+            let data = phonebook[i].name.toLowerCase() ;
+            
+            if (data === searchName) {
+                para.textContent = phonebook[i].name + "\'s phone number is :" + phonebook[i].number;
+                break;
+            } else {
+                para.textContent = "Not found in Database !"; 
+            }
+            div.appendChild(para);
+        }
+    }
+</script>
+</html>
