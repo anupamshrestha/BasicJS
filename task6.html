@@ -11,19 +11,21 @@
     <p id="demo1"></p>
 </body>
 <script>
-let cities = ['lonDon ', 'ManCHESTer ', 'BiRmiNGHAM ', 'liVERpoOL '];
-let finalCities = [];
-let result = "";
-for (i=0; i < cities.length; i++) {
     
+const cities = ['lonDon','ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+let properCase= " ";
+    for (i=0; i < cities.length; i++) {
     let input = cities[i];
-    let lower = input.toLowerCase();
+    let lower = input.toLowerCase() + ", ";
     let firstLetter = lower.slice(0,1);
-    let upper = lower.replace(firstLetter, firstLetter.toUpperCase());
-    finalCities +=upper;
-
+    properCase += lower.replace(firstLetter, firstLetter.toUpperCase());
     }
+    properCase = properCase.slice(0, properCase.length-2) + ".";
+
 document.getElementById("demo").innerHTML = cities;
-document.getElementById("demo1").innerHTML = finalCities;
+document.getElementById("demo1").innerHTML = properCase;
+
+
+
 </script>
 </html>
