@@ -6,15 +6,49 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="demo"></p>
+   <div>
+       <label for="customname"> Enter custom name: </label>
+       <input type="text" id = "customname" placeholder="Enter your name"> <br><br>
+   </div>
+   <div>
+       <label for="us">US</label>
+       <input type="radio" name = "ukus" id="us"> 
+       <label for="uk">Uk</label>
+       <input type="radio" name = "ukus" id="uk"> 
+   </div>
+   <div>
+       <button id="randomize"> Generate random number</button>
+   </div>
+   <p class="story"></p>
 </body>
 <script>
-    //For In loop
-    let person = {a:1, b:2, c:3};
-    let output = "";
-    for (let property in person) {
-        output += property.toUpperCase() + ": "+ person[property] + "<br>"; 
-        document.getElementById("demo").innerHTML =  output;
-    }
+  const customName = document.getElementById("customname");
+  let insertx = ['Willy the Goblin', 'Bid Daddy', 'father Christmas'];
+  let inserty = ['the soup kitchen', 'DisneyLand', 'the wWhite House'];
+  let insertz = ['spontanuoslt conbusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
+  let storyText = "It was 94 fahrenheit outside, so :" + insertx +": went for a walk. When they got to :" + inserty +":, they stared in horror for a few moments, then :" + insertx + ":. Bob saw the whole thing, but was not surprised — :" +insertx + ": weighs 300 pounds, and it was a hot day.";
+
+  randomize.addEventListener('click', result);
+
+function result() {
+
+  if(customName.value !== '') {
+    let name = customName.value;
+  }
+ 
+  let newStory = storyText;
+  
+  
+
+  if(document.getElementById("uk").checked) {
+    let weight = Math.round(300);
+    let temperature =  Math.round(94);
+
+  }
+
+  story.textContent = "";
+  story.style.visibility = 'visible';
+}
+
 </script>
 </html>
